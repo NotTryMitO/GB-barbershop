@@ -165,7 +165,7 @@ header {
 
 /*main starts*/
 .hero {
-  background: url('/site/static/images/barber2.webp') no-repeat center center/cover fixed;
+  background: url('site/static/images/barber2.webp') no-repeat center center/cover fixed;
   height: 90vh;
   position: relative;
 }
