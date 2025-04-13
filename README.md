@@ -1,2 +1,3 @@
 # GB barbershop
- template to GB barbershop
+
+ Website template to GB barbershop
