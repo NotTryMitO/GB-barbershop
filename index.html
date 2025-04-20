@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>GB Barbershop</title>
-  <link rel="stylesheet" href="site/static/css/index.css" />
-  <link rel="icon" href="site/static/images/favicon.webp">
+  <link rel="stylesheet" href="/index.css" />
+  <link rel="icon" href="images/favicon.webp">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
     </style>
@@ -13,7 +13,7 @@
 <body>
   <header>
     <div class="container header-glass">
-      <img src="site/static/images/logo.webp" alt="Logo GB Barbershop" onclick="home()">
+      <img src="images/logo.webp" alt="Logo GB Barbershop" onclick="home()">
       
       <button class="menu-toggle" onclick="toggleMenu(this)">
         <span></span>
@@ -52,18 +52,59 @@
     <div class="work">
       <div class="work-2">
         <ol>
-          <li><h1 class="bold">Especialização em Cortes Masculinos:</h1>Nossos barbeiros são especialistas em cortes modernos e clássicos, oferecendo um serviço personalizado que atende ao seu estilo.</li>
+          <li><h1 class="bold">Especialização em Cortes Masculinos:</h1><p class="descricao">Nossos barbeiros são especialistas em cortes modernos e clássicos, oferecendo um serviço personalizado que atende ao seu estilo.</p></li>
           
-          <li><h1 class="bold">Cuidados Premium com a Barba:</h1>Oferecemos tratamentos completos para a barba, usando produtos de alta qualidade que garantem um visual impecável e saudável.</li>
+          <li><h1 class="bold">Cuidados Premium com a Barba:</h1><p class="descricao">Oferecemos tratamentos completos para a barba, usando produtos de alta qualidade que garantem um visual impecável e saudável.</p></li>
           
-          <li><h1 class="bold">Ambiente Acolhedor:</h1> Nossa barbearia proporciona um ambiente relaxante e confortável, onde você pode se sentir à vontade enquanto cuida do seu visual.</li>
+          <li><h1 class="bold">Ambiente Acolhedor:</h1><p class="descricao">Nossa barbearia proporciona um ambiente relaxante e confortável, onde você pode se sentir à vontade enquanto cuida do seu visual.</p></li>
           
-          <li><h1 class="bold">Profissionais Experientes:</h1> Nossa equipe é altamente qualificada e atualizada com as últimas tendências e técnicas, garantindo um serviço de excelência.</li>
+          <li><h1 class="bold">Profissionais Experientes:</h1><p class="descricao">Nossa equipe é altamente qualificada e atualizada com as últimas tendências e técnicas, garantindo um serviço de excelência.</p></li>
           
-          <li><h1 class="bold">Serviço Personalizado:</h1> Cada cliente recebe atenção individualizada, garantindo que suas preferências e necessidades sejam atendidas com precisão.</li>
+          <li><h1 class="bold">Serviço Personalizado:</h1><p class="descricao">Cada cliente recebe atenção individualizada, garantindo que suas preferências e necessidades sejam atendidas com precisão.</p></li>
         </ol>
       </div>
-      <div class="img"><img src="site/static/images/corte2.webp" alt="Corte moica"></div>
+      <div class="div-img-corte"><img class="img-corte" src="images/corte2.webp" alt="Corte moica" id="img-troca"></div>
+    </div>
+  </section>
+  <section class="barber-complete">
+    <h1>Barbearia Completa</h1>
+    <div class="servicos">
+      <div class="item">
+        <div class="img">
+          <img src="images/tesoura.png" alt="img">
+        </div>
+        <div class="content">
+          <h1>Cortes de Cabelo</h1>
+          <p>Experimente o melhor em cortes de cabelo masculinos e serviços de barbearia na GB BarberShop em São joão da Madeira. Nossos talentosos barbeiros personalizam estilos clássicos e modernos para um visual impecável. Agende hoje!</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="img">
+          <img src="images/navalha.png" alt="img">
+        </div>
+        <div class="content">
+          <h1>Cortar a Barba</h1>
+        <p>Na GB BarberShop em São João da Madeira, oferecemos cortes personalizados para todos os tipos de barba. Nossos barbeiros especializados adaptam-se ao seu estilo único. Agende agora e descubra a diferença!</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="img">
+          <img src="images/barba.png" alt="img">
+        </div>
+        <div class="content">
+          <h1>Barboterapia</h1>
+          <p>Na GB BarberShop, a sua barbearia em São João da Madeira, oferecemos a Barboterapia Especial para que você relaxe e renove-se conosco. Agende já!</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="img">
+          <img src="images/bigode.png" alt="img">
+        </div>
+        <div class="content">
+          <h1>Coloração Capilar</h1>
+          <p>Na GB BarberShop em São João da Madeira, nossos barbeiros especializados proporcionam coloração capilar de qualidade e sem ardência. Transforme seu visual com segurança. Agende agora!</p>
+        </div>
+      </div>
     </div>
   </section>
   <section class="precos">
@@ -101,7 +142,6 @@
       <p>© 2025 BG Barbershop. Todos os direitos reservados.</p>
     </div>
   </footer>
-
 </body>
 <script>
   function toggleMenu(button) {
@@ -121,5 +161,24 @@
   function agendar() {
     window.location.href = "https://www.fresha.com/pt/a/gb-barber-shop-sao-joao-da-madeira-rua-doutor-sa-carneiro-q2vl2l4d";
   }
+</script>
+<script>
+  const img = document.getElementById('img-troca');
+
+  // Caminhos das duas imagens
+  const imagem1 = 'images/corte1.webp';
+  const imagem2 = 'images/corte2.webp';
+
+  let imagemAtual = 1;
+
+  img.addEventListener('click', () => {
+    if (imagemAtual === 2) {
+      img.src = imagem1;
+      imagemAtual = 1;
+    } else {
+      img.src = imagem2;
+      imagemAtual = 2;
+    }
+  });
 </script>
 </html>
