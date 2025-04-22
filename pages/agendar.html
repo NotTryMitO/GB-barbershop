@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agende agora! - GB Barbershop</title>
+    <link rel="icon" href="/images/favicon.webp">
+    <link rel="stylesheet" href="/css/agendar.css">
+</head>
+<body>
+    <header>
+        <div class="container header-glass">
+          <img src="/images/logo.webp" alt="Logo GB Barbershop" onclick="home()">
+          
+          <button class="menu-toggle" onclick="toggleMenu(this)">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          
+          <nav id="menu">
+            <a href="/index.html">Inicio</a>
+            <a href="/pages/agendar.html">Agendar</a>
+            <a href="/pages/equipa.html">Equipa</a>
+            <a href="/pages/cortes.html">Cortes de cabelo</a>
+            <a href="/pages/contato.html">Contato</a>
+          </nav>
+        </div>
+      </header>
+      <section class="main">
+        <h1 class="titulo">Venha Ter um Corte de Cabelo e Barba Perfeito!</h1>
+        <h3>Atendimento Personalizado: Cada visita é única. Nossos barbeiros dedicam tempo para entender suas preferências e oferecer um serviço feito sob medida.</h3>
+        <p>Agende Online! Assim consegue realizar um agendamento rápido e fácil.</p>
+        <div class="img">
+            <img src="/images/fresha.webp" alt="img">
+        </div>
+        <div class="btn-div">
+            <button class="btn" onclick="agendar()">
+              <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              Agende agora!
+            </button>
+          </div>
+    </section>
+</body>
+<script>
+    function toggleMenu(button) {
+    const nav = document.getElementById("menu");
+    nav.classList.toggle("show");
+    button.classList.toggle("open");
+  }
+
+  function agendar() {
+    window.location.href = "https://www.fresha.com/pt/a/gb-barber-shop-sao-joao-da-madeira-rua-doutor-sa-carneiro-q2vl2l4d";
+  }
+
+</script>
+</html>
